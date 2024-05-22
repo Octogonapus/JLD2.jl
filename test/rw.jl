@@ -348,7 +348,7 @@ openfuns = [
     (writef=() -> jldopen(fn, "w"; iotype=JLD2.MmapIO, compress=false),
      readf=() -> jldopen(fn, "r"; iotype=JLD2.MmapIO)),
     (writef=() -> jldopen(fn, "w"; iotype=IOStream; compress=false),
-     readf=() -> jldopen(fn, "r"; iotype=IOStream),
+     readf=() -> jldopen(fn, "r"; iotype=IOStream)),
     (writef=() -> (global io_buffer=IOBuffer(); jldopen(io_buffer, "w"; compress=false)),
      readf=() -> (seekstart(io_buffer); jldopen(io_buffer))),
     (writef=() -> (global io_buffer=IOBuffer(); jldopen(io_buffer, "w"; compress=true)),
