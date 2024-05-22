@@ -355,7 +355,7 @@ openfuns = [
      readf=() -> (seekstart(io_buffer); jldopen(io_buffer))),
 ]
 
-for (;writef, readf) in openfuns
+for (writef, readf) in openfuns
     fid = writef()
     @info("[$fn]: Using $(fid), $(fid.compress ? "compressed" : "uncompressed")")
     @info("  Write time:")
